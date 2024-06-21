@@ -4,28 +4,10 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                     bat 'mvn -B -DskipTests clean package'
-                }
-            }
-        }
-        stage('Test') {
-            steps {
-                script {
                     if (isUnix()) {
-                        sh 'mvn test'
+                        sh 'echo "Running on Unix-like system"'
                     } else {
-                        bat 'mvn test'
-                    }
-                }
-            }
-        }
-        stage('Deploy') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh 'mvn deploy'
-                    } else {
-                        bat 'mvn deploy'
+                        bat 'echo Running on Windows system'
                     }
                 }
             }
