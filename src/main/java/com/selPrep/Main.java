@@ -17,16 +17,16 @@ public class Main {
             System.out.println("i = " + i);
         }
 
-        WebDriver driver = new ChromeDriver();
+        //WebDriver driver = new ChromeDriver();
 
-        driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+       // driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
 
-        driver.get("http://localhost/opencart/upload/admins/index.php");
+       // driver.get("http://localhost/opencart/upload/admins/index.php");
 
-        System.out.print("Browser title"+ driver.getTitle());
+        //System.out.print("Browser title"+ driver.getTitle());
 
         //close browser
 
-        driver.quit();
+        //driver.quit();
     }
 }
