@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'echo "Running on Unix-like system"'
+                        sh 'echo "Running on Unix-like systems"'
                     } else {
                         bat 'echo Running on Windows system'
                     }
